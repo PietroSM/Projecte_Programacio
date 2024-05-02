@@ -46,25 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pantalles\Pagina_Benvinguda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\Pagina_Benvinguda.Designer.cs">
+      <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalles\registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\registrarse.Designer.cs">
+      <DependentUpon>registrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona\Cliente\Cliente.cs" />
+    <Compile Include="Persona\Cliente\Empresa.cs" />
+    <Compile Include="Persona\Cliente\Particular.cs" />
     <Compile Include="Persona\Vendedor\Autonomo.cs" />
     <Compile Include="Persona\Vendedor\Cooperativa.cs" />
     <Compile Include="Productos\Fruta.cs" />
     <Compile Include="Productos\Hortaliza.cs" />
-    <Compile Include="Pagina_Benvinguda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pagina_Benvinguda.Designer.cs">
-      <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persona\Persona.cs" />
     <Compile Include="Productos\ProductoA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persona\Vendedor\Vendedor.cs" />
     <Compile Include="Productos\Verdura.cs" />
-    <EmbeddedResource Include="Pagina_Benvinguda.resx">
+    <EmbeddedResource Include="Pantalles\Pagina_Benvinguda.resx">
       <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalles\registrarse.resx">
+      <DependentUpon>registrarse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

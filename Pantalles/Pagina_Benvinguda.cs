@@ -8,23 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projecte_programació
+namespace Projecte_programació.Pantalles
 {
     public partial class Pagina_Benvinguda : Form
     {
+        registrarse formuRegistro;
+
         public Pagina_Benvinguda()
         {
             InitializeComponent();
         }
 
-        private void Registrar_Click(object sender, EventArgs e)
+        private void Registrarse_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Iniciar_sesion_Click(object sender, EventArgs e)
-        {
-
+            formuRegistro = new registrarse();
+            formuRegistro.ShowDialog();
         }
     }
 }
