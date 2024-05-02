@@ -30,37 +30,66 @@
         {
             this.iniciar_sessio = new System.Windows.Forms.Button();
             this.Registrarse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // iniciar_sessio
             // 
-            this.iniciar_sessio.Location = new System.Drawing.Point(470, 192);
+            this.iniciar_sessio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.iniciar_sessio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.iniciar_sessio.FlatAppearance.BorderSize = 2;
+            this.iniciar_sessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iniciar_sessio.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iniciar_sessio.ForeColor = System.Drawing.Color.White;
+            this.iniciar_sessio.Location = new System.Drawing.Point(834, 523);
             this.iniciar_sessio.Name = "iniciar_sessio";
-            this.iniciar_sessio.Size = new System.Drawing.Size(141, 67);
+            this.iniciar_sessio.Size = new System.Drawing.Size(284, 56);
             this.iniciar_sessio.TabIndex = 0;
-            this.iniciar_sessio.Text = "Log_In";
-            this.iniciar_sessio.UseVisualStyleBackColor = true;
+            this.iniciar_sessio.Text = "Iniciar Sessión";
+            this.iniciar_sessio.UseVisualStyleBackColor = false;
+            this.iniciar_sessio.Click += new System.EventHandler(this.iniciar_sessio_Click);
             // 
             // Registrarse
             // 
-            this.Registrarse.Location = new System.Drawing.Point(137, 192);
+            this.Registrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.Registrarse.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Registrarse.FlatAppearance.BorderSize = 2;
+            this.Registrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registrarse.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registrarse.ForeColor = System.Drawing.Color.White;
+            this.Registrarse.Location = new System.Drawing.Point(189, 523);
             this.Registrarse.Name = "Registrarse";
-            this.Registrarse.Size = new System.Drawing.Size(136, 65);
+            this.Registrarse.Size = new System.Drawing.Size(284, 56);
             this.Registrarse.TabIndex = 1;
             this.Registrarse.Text = "Registrarse";
-            this.Registrarse.UseVisualStyleBackColor = true;
+            this.Registrarse.UseVisualStyleBackColor = false;
             this.Registrarse.Click += new System.EventHandler(this.Registrarse_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(425, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(473, 73);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "WOLLA-DONA";
             // 
             // Pagina_Benvinguda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
+            this.ClientSize = new System.Drawing.Size(1384, 811);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrarse);
             this.Controls.Add(this.iniciar_sessio);
             this.Name = "Pagina_Benvinguda";
             this.Text = "Pagina_Benvinguda";
+            this.Load += new System.EventHandler(this.Pagina_Benvinguda_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,5 +97,6 @@
 
         private System.Windows.Forms.Button iniciar_sessio;
         private System.Windows.Forms.Button Registrarse;
+        private System.Windows.Forms.Label label1;
     }
 }

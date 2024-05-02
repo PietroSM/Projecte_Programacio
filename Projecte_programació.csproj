@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pantalles\Iniciar_Sessio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\Iniciar_Sessio.Designer.cs">
+      <DependentUpon>Iniciar_Sessio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalles\Pagina_Benvinguda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persona\Vendedor\Vendedor.cs" />
     <Compile Include="Productos\Verdura.cs" />
+    <EmbeddedResource Include="Pantalles\Iniciar_Sessio.resx">
+      <DependentUpon>Iniciar_Sessio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantalles\Pagina_Benvinguda.resx">
       <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
     </EmbeddedResource>

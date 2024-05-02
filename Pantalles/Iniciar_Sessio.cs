@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Projecte_programació.Pantalles
 {
-    public partial class registrarse : Form
+    public partial class Iniciar_Sessio : Form
     {
-        public registrarse()
+        public Iniciar_Sessio()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
