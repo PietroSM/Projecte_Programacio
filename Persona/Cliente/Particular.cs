@@ -32,5 +32,10 @@ namespace Projecte_programació.Persona.Cliente
         {
             this.dni = dni;
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

@@ -67,6 +67,14 @@ namespace Projecte_programació.Persona
             this.correo = correo;
         }
 
-
+        public override string ToString()
+        {
+            return "{" +
+                            "nombre=" + nombre +
+                            ", contrasenya=" + contrasenya +
+                            ", localizacion=" + localizacion +
+                            ", correo=" + correo +
+                            '}';
+        }
     }
 }

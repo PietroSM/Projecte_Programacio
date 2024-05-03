@@ -19,6 +19,9 @@ namespace Projecte_programació.Persona.Vendedor
         {
         }
 
-        
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

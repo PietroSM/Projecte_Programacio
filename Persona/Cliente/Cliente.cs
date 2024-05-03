@@ -36,5 +36,9 @@ namespace Projecte_programació.Persona.Cliente
             this.id_Cliente=id_Cliente;
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

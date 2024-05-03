@@ -67,6 +67,7 @@
     <Compile Include="Persona\Cliente\Cliente.cs" />
     <Compile Include="Persona\Cliente\Empresa.cs" />
     <Compile Include="Persona\Cliente\Particular.cs" />
+    <Compile Include="Persona\Usuarios.cs" />
     <Compile Include="Persona\Vendedor\Autonomo.cs" />
     <Compile Include="Persona\Vendedor\Cooperativa.cs" />
     <Compile Include="Productos\Fruta.cs" />

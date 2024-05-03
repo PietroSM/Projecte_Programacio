@@ -30,5 +30,10 @@ namespace Projecte_programació.Persona.Cliente
         {
             this.cif = cif;
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
