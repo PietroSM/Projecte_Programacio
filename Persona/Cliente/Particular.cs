@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Cliente
 {
-    internal class Particular : Cliente
+    internal class Particular : ClienteC
     {
         private string dni;
 

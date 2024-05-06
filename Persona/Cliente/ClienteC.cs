@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Cliente
 {
-    internal abstract class Cliente: Persona
+    internal abstract class ClienteC: Persona
     {
         protected int id_Cliente;
         protected List<ProductoA> listaCompra;
 
 
 
-        public Cliente(string nombre, string contrasenya, string localizacion, 
+        public ClienteC(string nombre, string contrasenya, string localizacion, 
             string correo, int id_Cliente) : 
             base(nombre, contrasenya, localizacion, correo)
         {
@@ -22,7 +22,7 @@ namespace Projecte_programació.Persona.Cliente
             listaCompra = new List<ProductoA>();
         }
 
-        public Cliente() : 
+        public ClienteC() : 
             this("","","","",0)
         {
         }

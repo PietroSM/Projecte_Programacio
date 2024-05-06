@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Cliente
 {
-    internal class Empresa : Cliente
+    internal class Empresa : ClienteC
     {
         private string cif;
 

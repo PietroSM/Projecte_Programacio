@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Vendedor
 {
-    internal class Autonomo : Vendedor
+    internal class Autonomo : VendedorC
     {
 
         public Autonomo(string nombre, string contrasenya, string localizacion, 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Vendedor
 {
-    internal class Cooperativa : Vendedor
+    internal class Cooperativa : VendedorC
     {
         public Cooperativa(string nombre, string contrasenya, string localizacion, 
             string correo, int id_vendedor, string CIF) : 

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Vendedor
 {
-    internal abstract class Vendedor : Persona
+    internal abstract class VendedorC : Persona
     {
         protected int id_vendedor;
         protected string CIF;
 
-        public Vendedor(string nombre, string contrasenya, string localizacion, 
+        public VendedorC(string nombre, string contrasenya, string localizacion, 
             string correo, int id_vendedor, string CIF) : 
             base(nombre, contrasenya, localizacion, correo)
         {
@@ -19,7 +19,7 @@ namespace Projecte_programació.Persona.Vendedor
             this.CIF = CIF;
         }
 
-        public Vendedor() : 
+        public VendedorC() : 
             this("","","","",0,"")
         {
         }

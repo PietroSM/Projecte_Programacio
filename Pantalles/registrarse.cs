@@ -18,10 +18,10 @@ namespace Projecte_programació.Pantalles
         private Usuarios listaUsu;
 
 
-        public registrarse()
+        public registrarse(Usuarios usu)
         {
             InitializeComponent();
-            listaUsu = new Usuarios();
+            listaUsu = usu;
         }
 
 

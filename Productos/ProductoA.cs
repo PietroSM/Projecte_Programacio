@@ -9,12 +9,12 @@ namespace Projecte_programació.Producto
 {
     internal abstract class ProductoA
     {
-        protected Vendedor propietario;
+        protected VendedorC propietario;
         protected string temporada;
         protected double precioKg;
         protected int cantidad;
 
-        public ProductoA(Vendedor propietario, string temporada, 
+        public ProductoA(VendedorC propietario, string temporada, 
             double precioKg, int cantidad)
         {
             this.propietario = propietario;
@@ -27,12 +27,12 @@ namespace Projecte_programació.Producto
         { 
         }
 
-        public Vendedor GetPropietario()
+        public VendedorC GetPropietario()
         {
             return propietario;
         }
 
-        public void SetPropietario(Vendedor propietario)
+        public void SetPropietario(VendedorC propietario)
         {
             this.propietario = propietario;
         }

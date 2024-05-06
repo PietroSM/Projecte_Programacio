@@ -58,13 +58,25 @@
     <Compile Include="Pantalles\Pagina_Benvinguda.Designer.cs">
       <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalles\Pagina_Client_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\Pagina_Client_Main.Designer.cs">
+      <DependentUpon>Pagina_Client_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalles\Pagina_Vendedor_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\Pagina_Vendedor_Main.Designer.cs">
+      <DependentUpon>Pagina_Vendedor_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalles\registrarse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantalles\registrarse.Designer.cs">
       <DependentUpon>registrarse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persona\Cliente\Cliente.cs" />
+    <Compile Include="Persona\Cliente\ClienteC.cs" />
     <Compile Include="Persona\Cliente\Empresa.cs" />
     <Compile Include="Persona\Cliente\Particular.cs" />
     <Compile Include="Persona\Usuarios.cs" />
@@ -76,13 +88,19 @@
     <Compile Include="Productos\ProductoA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Persona\Vendedor\Vendedor.cs" />
+    <Compile Include="Persona\Vendedor\VendedorC.cs" />
     <Compile Include="Productos\Verdura.cs" />
     <EmbeddedResource Include="Pantalles\Iniciar_Sessio.resx">
       <DependentUpon>Iniciar_Sessio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalles\Pagina_Benvinguda.resx">
       <DependentUpon>Pagina_Benvinguda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalles\Pagina_Client_Main.resx">
+      <DependentUpon>Pagina_Client_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalles\Pagina_Vendedor_Main.resx">
+      <DependentUpon>Pagina_Vendedor_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalles\registrarse.resx">
       <DependentUpon>registrarse.cs</DependentUpon>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona
 {
-    internal abstract class Persona
+    public abstract class Persona
     {
         protected string nombre;
         protected string contrasenya;
@@ -67,6 +67,13 @@ namespace Projecte_programació.Persona
             this.correo = correo;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is Persona persona &&
+                   correo == persona.correo;
+        }
+
+
         public override string ToString()
         {
             return "{" +
@@ -76,5 +83,7 @@ namespace Projecte_programació.Persona
                             ", correo=" + correo +
                             '}';
         }
+
+
     }
 }

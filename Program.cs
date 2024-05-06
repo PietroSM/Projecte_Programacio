@@ -1,4 +1,6 @@
 ﻿using Projecte_programació.Pantalles;
+using Projecte_programació.Persona;
+using Projecte_programació.Persona.Vendedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,18 @@ namespace Projecte_programació
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pagina_Benvinguda());
+
+            Usuarios usuarios = new Usuarios();
+            usuarios.AnyadirPersona(new Autonomo("juan", "1234", "sant vicent",
+                "juan123@gmail.com", 0, "12323"));
+            usuarios.AnyadirPersona(new Cooperativa());
+            Application.Run(new Pagina_Benvinguda(usuarios));
+
         }
     }
 }

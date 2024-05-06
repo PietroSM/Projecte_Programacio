@@ -87,7 +87,6 @@
             this.Controls.Add(this.iniciar_sessio);
             this.Name = "Pagina_Benvinguda";
             this.Text = "Pagina_Benvinguda";
-            this.Load += new System.EventHandler(this.Pagina_Benvinguda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
