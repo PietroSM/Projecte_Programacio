@@ -1,4 +1,5 @@
 ﻿using Projecte_programació.Persona;
+using Projecte_programació.Productos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,14 +16,27 @@ namespace Projecte_programació.Pantalles
     {
         private Usuarios listUsu;
         private int posLista;
+        private Inventario inventario;
 
         public Pagina_Vendedor_Main(Usuarios usu, int posLista)
         {
             InitializeComponent();
             listUsu = usu;
             this.posLista = posLista;
+
+
+            Eliminar_Boton_Columna();
         }
 
+        private void Eliminar_Boton_Columna()
+        {
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "NOMBRE";
+            dataGridView1.Columns[1].Name = "TEMPORADA";
+            dataGridView1.Columns[2].Name = "PRECIO";
+            dataGridView1.Columns[3].Name = "CANTIDAD";
 
+            
+        }
     }
 }

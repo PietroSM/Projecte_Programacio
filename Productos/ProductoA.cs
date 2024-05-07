@@ -13,17 +13,19 @@ namespace Projecte_programació.Producto
         protected string temporada;
         protected double precioKg;
         protected int cantidad;
+        protected string nombre;
 
         public ProductoA(VendedorC propietario, string temporada, 
-            double precioKg, int cantidad)
+            double precioKg, int cantidad, string nombre)
         {
             this.propietario = propietario;
             this.temporada = temporada;
             this.precioKg = precioKg;
             this.cantidad = cantidad;
+            this.nombre = nombre;
         }
 
-        public ProductoA(): this(new Autonomo(),"",0,0) 
+        public ProductoA(): this(new Autonomo(),"",0,0,"") 
         { 
         }
 
@@ -65,6 +67,16 @@ namespace Projecte_programació.Producto
         public void SetCantidad(int cantidad)
         {
             this.cantidad = cantidad;
+        }
+
+        public string GetNombre()
+        {
+            return nombre;
+        }
+
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
         }
     }
 }

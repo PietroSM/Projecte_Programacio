@@ -10,14 +10,16 @@ namespace Projecte_programació.Producto
     internal class Fruta : ProductoA
     {
         public Fruta(VendedorC propietario, string temporada, double precioKg, 
-            int cantidad) : 
-            base(propietario, temporada, precioKg, cantidad)
+            int cantidad, string nombre) : base(propietario, temporada, 
+                precioKg, cantidad, nombre)
         {
         }
 
         public Fruta() : 
-            this(new Autonomo(), "", 0, 0)
+            this(new Autonomo(), "", 0, 0, "")
         {
         }
+
+
     }
 }

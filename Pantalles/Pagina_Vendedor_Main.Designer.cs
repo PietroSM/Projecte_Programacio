@@ -30,6 +30,8 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.BTNanyadir = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -59,16 +61,28 @@
             this.BTNanyadir.Text = "AÑADIR PRODUCTO";
             this.BTNanyadir.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(149, 204);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1484, 705);
+            this.dataGridView1.TabIndex = 14;
+            // 
             // Pagina_Vendedor_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(1845, 998);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNanyadir);
             this.Controls.Add(this.label8);
             this.Name = "Pagina_Vendedor_Main";
             this.Text = "Pagina_Vendedor_Main";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,5 +92,6 @@
 
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BTNanyadir;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

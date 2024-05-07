@@ -9,14 +9,16 @@ namespace Projecte_programació.Producto
 {
     internal class Hortaliza : ProductoA
     {
-        public Hortaliza(VendedorC propietario, string temporada, 
-            double precioKg, int cantidad) : 
-            base(propietario, temporada, precioKg, cantidad)
+        public Hortaliza(VendedorC propietario, string temporada, double precioKg, 
+            int cantidad, string nombre) : base(propietario, temporada, precioKg, 
+                cantidad, nombre)
         {
         }
 
-        public Hortaliza() : this(new Autonomo(), "", 0, 0)
+        public Hortaliza() : this(new Autonomo(), "", 0, 0,"")
         {
         }
+
+
     }
 }

@@ -22,8 +22,7 @@ namespace Projecte_programació
             Application.SetCompatibleTextRenderingDefault(false);
 
             Usuarios usuarios = new Usuarios();
-            usuarios.AnyadirPersona(new Autonomo("juan", "1234", "sant vicent",
-                "juan123@gmail.com", 0, "12323"));
+            usuarios.LeerFichero();
             usuarios.AnyadirPersona(new Cooperativa());
             Application.Run(new Pagina_Benvinguda(usuarios));
 

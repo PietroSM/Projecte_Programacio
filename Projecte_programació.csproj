@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ILeerArchivos.cs" />
     <Compile Include="Pantalles\Iniciar_Sessio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,7 @@
     <Compile Include="Productos\Fruta.cs" />
     <Compile Include="Productos\Hortaliza.cs" />
     <Compile Include="Persona\Persona.cs" />
+    <Compile Include="Productos\Inventario.cs" />
     <Compile Include="Productos\ProductoA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
