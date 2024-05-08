@@ -121,5 +121,13 @@ namespace Projecte_programació.Persona
             }
 
         }
+
+
+        //Devolver Usuario
+        public Persona BuscadorPersona(string email)
+        {
+            return personaList[personaList.IndexOf(
+                new Cooperativa("", "", "", email, 0, ""))];
+        }
     }
 }

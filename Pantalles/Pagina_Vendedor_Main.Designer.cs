@@ -28,10 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label8 = new System.Windows.Forms.Label();
             this.BTNanyadir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioKgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.verduraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoABindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -63,13 +76,84 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.propietarioDataGridViewTextBoxColumn,
+            this.temporadaDataGridViewTextBoxColumn,
+            this.precioKgDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.Eliminar});
+            this.dataGridView1.DataSource = this.productoABindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(149, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1484, 705);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Elimina";
+            this.Eliminar.Width = 200;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // propietarioDataGridViewTextBoxColumn
+            // 
+            this.propietarioDataGridViewTextBoxColumn.DataPropertyName = "Propietario";
+            this.propietarioDataGridViewTextBoxColumn.HeaderText = "Propietario";
+            this.propietarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.propietarioDataGridViewTextBoxColumn.Name = "propietarioDataGridViewTextBoxColumn";
+            this.propietarioDataGridViewTextBoxColumn.Visible = false;
+            this.propietarioDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // temporadaDataGridViewTextBoxColumn
+            // 
+            this.temporadaDataGridViewTextBoxColumn.DataPropertyName = "Temporada";
+            this.temporadaDataGridViewTextBoxColumn.HeaderText = "Temporada";
+            this.temporadaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.temporadaDataGridViewTextBoxColumn.Name = "temporadaDataGridViewTextBoxColumn";
+            this.temporadaDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // precioKgDataGridViewTextBoxColumn
+            // 
+            this.precioKgDataGridViewTextBoxColumn.DataPropertyName = "PrecioKg";
+            this.precioKgDataGridViewTextBoxColumn.HeaderText = "PrecioKg";
+            this.precioKgDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precioKgDataGridViewTextBoxColumn.Name = "precioKgDataGridViewTextBoxColumn";
+            this.precioKgDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // productoABindingSource1
+            // 
+            this.productoABindingSource1.DataSource = typeof(Projecte_programació.Producto.ProductoA);
+            // 
+            // verduraBindingSource
+            // 
+            this.verduraBindingSource.DataSource = typeof(Projecte_programació.Producto.Verdura);
+            // 
+            // productoABindingSource
+            // 
+            this.productoABindingSource.DataSource = typeof(Projecte_programació.Producto.ProductoA);
             // 
             // Pagina_Vendedor_Main
             // 
@@ -82,7 +166,11 @@
             this.Controls.Add(this.label8);
             this.Name = "Pagina_Vendedor_Main";
             this.Text = "Pagina_Vendedor_Main";
+            this.Load += new System.EventHandler(this.Pagina_Vendedor_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +181,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BTNanyadir;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource productoABindingSource;
+        private System.Windows.Forms.BindingSource verduraBindingSource;
+        private System.Windows.Forms.BindingSource productoABindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn propietarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temporadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioKgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

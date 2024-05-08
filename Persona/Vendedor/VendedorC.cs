@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Persona.Vendedor
 {
-    internal abstract class VendedorC : Persona
+    public abstract class VendedorC : Persona
     {
         protected int id_vendedor;
         protected string CIF;

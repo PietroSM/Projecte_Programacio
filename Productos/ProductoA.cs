@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Producto
 {
-    internal abstract class ProductoA
+    public abstract class ProductoA
     {
         protected VendedorC propietario;
         protected string temporada;
         protected double precioKg;
         protected int cantidad;
         protected string nombre;
+
+        public VendedorC Propietario { get => propietario; set => propietario = value; }
+        public string Temporada { get => temporada; set => temporada = value; }
+        public double PrecioKg { get => precioKg; set => precioKg = value; }
+        public int Cantidad { get => cantidad; set => cantidad = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
 
         public ProductoA(VendedorC propietario, string temporada, 
             double precioKg, int cantidad, string nombre)
@@ -77,6 +83,11 @@ namespace Projecte_programació.Producto
         public void SetNombre(string nombre)
         {
             this.nombre = nombre;
+        }
+
+        public override string ToString()
+        {
+            return nombre;
         }
     }
 }

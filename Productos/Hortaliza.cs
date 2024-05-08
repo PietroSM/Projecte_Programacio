@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Producto
 {
-    internal class Hortaliza : ProductoA
+    public class Hortaliza : ProductoA
     {
         public Hortaliza(VendedorC propietario, string temporada, double precioKg, 
             int cantidad, string nombre) : base(propietario, temporada, precioKg, 
@@ -19,6 +19,9 @@ namespace Projecte_programació.Producto
         {
         }
 
-
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

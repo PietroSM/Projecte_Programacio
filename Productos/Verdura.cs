@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projecte_programació.Producto
 {
-    internal class Verdura : ProductoA
+    public class Verdura : ProductoA
     {
         public Verdura(VendedorC propietario, string temporada, double precioKg, 
             int cantidad, string nombre) : 
@@ -19,6 +19,9 @@ namespace Projecte_programació.Producto
         {
         }
 
-
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

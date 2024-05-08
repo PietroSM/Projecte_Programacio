@@ -116,6 +116,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Projecte_programació.Producto.Fruta.datasource" />
+    <None Include="Properties\DataSources\Projecte_programació.Producto.Hortaliza.datasource" />
+    <None Include="Properties\DataSources\Projecte_programació.Producto.ProductoA.datasource" />
+    <None Include="Properties\DataSources\Projecte_programació.Producto.Verdura.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
