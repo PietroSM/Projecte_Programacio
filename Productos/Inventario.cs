@@ -82,5 +82,16 @@ namespace Projecte_programació.Productos
             }
         }
 
+
+        public void AnyadirProducto(ProductoA p)
+        {
+            lista_inventario.Add(p);
+        }
+
+        public string MostrarUno(int pos)
+        {
+            return lista_inventario[pos].ToString();
+        }
+
     }
 }

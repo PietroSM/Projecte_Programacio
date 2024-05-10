@@ -129,5 +129,12 @@ namespace Projecte_programació.Persona
             return personaList[personaList.IndexOf(
                 new Cooperativa("", "", "", email, 0, ""))];
         }
+
+
+
+        public Persona BuscadorPersona2(int pos)
+        {
+            return personaList[pos];
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.RBverdura = new System.Windows.Forms.RadioButton();
             this.RBhortaliza = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.BTNback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NUDcantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,7 +176,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -185,6 +186,23 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BTNback
+            // 
+            this.BTNback.BackColor = System.Drawing.Color.Orange;
+            this.BTNback.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTNback.FlatAppearance.BorderSize = 4;
+            this.BTNback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNback.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNback.ForeColor = System.Drawing.Color.White;
+            this.BTNback.Location = new System.Drawing.Point(86, 66);
+            this.BTNback.Name = "BTNback";
+            this.BTNback.Size = new System.Drawing.Size(130, 77);
+            this.BTNback.TabIndex = 26;
+            this.BTNback.Text = "Volver";
+            this.BTNback.UseVisualStyleBackColor = false;
+            this.BTNback.Click += new System.EventHandler(this.BTNback_Click);
             // 
             // Formulario_Añadir_Productos
             // 
@@ -192,6 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(1845, 998);
+            this.Controls.Add(this.BTNback);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RBhortaliza);
             this.Controls.Add(this.RBverdura);
@@ -228,5 +247,6 @@
         private System.Windows.Forms.RadioButton RBverdura;
         private System.Windows.Forms.RadioButton RBhortaliza;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTNback;
     }
 }

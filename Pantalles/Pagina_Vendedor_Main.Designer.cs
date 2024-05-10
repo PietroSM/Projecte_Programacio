@@ -32,12 +32,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.BTNanyadir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.propietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioKgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productoABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.verduraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoABindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -73,6 +73,7 @@
             this.BTNanyadir.TabIndex = 13;
             this.BTNanyadir.Text = "AÑADIR PRODUCTO";
             this.BTNanyadir.UseVisualStyleBackColor = false;
+            this.BTNanyadir.Click += new System.EventHandler(this.BTNanyadir_Click);
             // 
             // dataGridView1
             // 
@@ -93,14 +94,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1484, 705);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Text = "Elimina";
-            this.Eliminar.Width = 200;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -142,6 +135,14 @@
             this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
             this.cantidadDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Elimina";
+            this.Eliminar.Width = 200;
             // 
             // productoABindingSource1
             // 
