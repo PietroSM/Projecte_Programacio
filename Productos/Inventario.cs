@@ -25,7 +25,15 @@ namespace Projecte_programació.Productos
         {
             return lista_inventario;
         }
+
+
+
+        public void SetLista_Inventario(List<ProductoA> lista_inventario)
+        {
+            this.lista_inventario = lista_inventario;
+        }
         
+
         public void LeerFichero()
         {
             StreamReader miFichero = null;
@@ -51,6 +59,7 @@ namespace Projecte_programació.Productos
                             (VendedorC) u1.BuscadorPersona(parts[0]),
                             parts[2], Convert.ToDouble(parts[3]),
                             Convert.ToInt32(parts[4]), parts[5]));
+
                     }
                     //Verdura
                     else if (parts[1] == "1")
@@ -78,6 +87,58 @@ namespace Projecte_programació.Productos
             finally
             {
                 if(miFichero != null) 
+                    miFichero.Close();
+            }
+        }
+
+
+        public void GuardarFichero()
+        {
+            StreamWriter miFichero = null;
+            string fichero = "Inventario.txt";
+
+            try
+            {
+                miFichero = new StreamWriter(fichero, false);
+
+                for (int i = 0; i < lista_inventario.Count; i++)
+                {
+                    if (lista_inventario[i] is Fruta)
+                    {
+                        miFichero.WriteLine(
+                            lista_inventario[i].GetPropietario().GetCorreo()+";"+
+                            "0;" + lista_inventario[i].GetTemporada() + ";" +
+                            lista_inventario[i].GetPrecioKg()+";"+
+                            lista_inventario[i].GetCantidad()+";"+
+                            lista_inventario[i].GetNombre());
+                    }
+                    else if(lista_inventario[i] is Verdura)
+                    {
+                        miFichero.WriteLine(
+                            lista_inventario[i].GetPropietario().GetCorreo() + ";" +
+                            "1;" + lista_inventario[i].GetTemporada() + ";" +
+                            lista_inventario[i].GetPrecioKg() + ";" +
+                            lista_inventario[i].GetCantidad() + ";" +
+                            lista_inventario[i].GetNombre());
+                    }
+                    else if(lista_inventario[i] is Hortaliza)
+                    {
+                        miFichero.WriteLine(
+                            lista_inventario[i].GetPropietario().GetCorreo() + ";" +
+                            "1;" + lista_inventario[i].GetTemporada() + ";" +
+                            lista_inventario[i].GetPrecioKg() + ";" +
+                            lista_inventario[i].GetCantidad() + ";" +
+                            lista_inventario[i].GetNombre());
+                    }
+                }
+            }
+            catch (IOException)
+            {
+                Console.WriteLine("Error");
+            }
+            finally
+            {
+                if (miFichero != null)
                     miFichero.Close();
             }
         }

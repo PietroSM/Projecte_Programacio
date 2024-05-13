@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projecte_programació.Persona
 {
@@ -121,6 +122,8 @@ namespace Projecte_programació.Persona
             }
 
         }
+
+
 
 
         //Devolver Usuario

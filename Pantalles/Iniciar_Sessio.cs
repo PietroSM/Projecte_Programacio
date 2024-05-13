@@ -1,5 +1,7 @@
 ﻿using Projecte_programació.Persona;
 using Projecte_programació.Persona.Vendedor;
+using Projecte_programació.Producto;
+using Projecte_programació.Productos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +18,13 @@ namespace Projecte_programació.Pantalles
     {
         Pagina_Vendedor_Main paginaVendedor;
         private Usuarios listUsu;
+        private Inventario inventario;
 
         public Iniciar_Sessio(Usuarios usu)
         {
             InitializeComponent();
             listUsu = usu;
+            inventario = new Inventario();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,10 +40,40 @@ namespace Projecte_programació.Pantalles
             {
                 if(listUsu.tipoUsuario(correoTB) == "vendedor")
                 {
+                    inventario.GetLista_Inventario().Clear();
+                    inventario.LeerFichero();
+
+
+                    //lista amb productes de asoles ixe vendedor
+                    List<ProductoA> listaEnviar =
+                        inventario.GetLista_Inventario().
+                        Where(p => p.GetPropietario().GetCorreo() == correoTB)
+                        .ToList();
+
+
+                    //llista amb productes que no tinguen ixe propietari
+                    List<ProductoA> listaConservar =
+                        inventario.GetLista_Inventario().
+                        Where(p => p.GetPropietario().GetCorreo() !=
+                        correoTB).ToList();
+
+
+                    //Netegem el inventari i tornem a guardar asoles
+                    //les no enviades
+                    inventario.GetLista_Inventario().Clear();
+                    inventario.SetLista_Inventario(listaConservar);
+
+
                     paginaVendedor = new Pagina_Vendedor_Main(
-                        listUsu, listUsu.PosicionLista(correoTB));
-                    paginaVendedor.Show();
-                    this.Hide();
+                        listUsu, listUsu.PosicionLista(correoTB),listaEnviar);
+                    //paginaVendedor.Show();
+                    DialogResult resultadoPaginaVendedor = paginaVendedor.ShowDialog();
+
+                    //Guardar els productes resultants de la pagina vendedor
+                    paginaVendedor.ProductosVendedor
+                        .ForEach(p => inventario.AnyadirProducto(p));
+
+                    inventario.GuardarFichero();
                 }
             }
             else

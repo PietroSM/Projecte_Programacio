@@ -18,34 +18,33 @@ namespace Projecte_programació.Pantalles
     {
         private Usuarios listUsu;
         private int posLista;
-        private Inventario inventario;
+        private List<ProductoA> productosVendedor;
         Formulario_Añadir_Productos formuAnyadir;
 
-        public Pagina_Vendedor_Main(Usuarios usu, int posLista)
+
+        public Pagina_Vendedor_Main(Usuarios usu, int posLista, List<ProductoA> productosVendedor)
         {
             InitializeComponent();
             listUsu = usu;
             this.posLista = posLista;
-            inventario = new Inventario();
-            inventario.LeerFichero();
+            this.productosVendedor = productosVendedor;
             formuAnyadir = new Formulario_Añadir_Productos();
      
-
-            Eliminar_Boton_Columna();
         }
 
-        private void Eliminar_Boton_Columna()
+        
+        public List<ProductoA> ProductosVendedor
         {
-
-            
+            get { return productosVendedor; }
         }
 
         private void Pagina_Vendedor_Main_Load(object sender, EventArgs e)
         {
-            //productoABindingSource1.Add(inventario.GetLista_Inventario()[0]);
-            inventario.GetLista_Inventario().ForEach(
+            productosVendedor.ForEach(
                 p => productoABindingSource1.Add(p));
+
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -69,7 +68,7 @@ namespace Projecte_programació.Pantalles
             {
                 if (formuAnyadir.Fruta)
                 {
-                    inventario.AnyadirProducto(
+                    productosVendedor.Add(
                         new Fruta((VendedorC)listUsu.BuscadorPersona2(posLista),
                         formuAnyadir.Temporada,
                         formuAnyadir.PrecioKg,
@@ -78,7 +77,7 @@ namespace Projecte_programació.Pantalles
                 }
                 else if (formuAnyadir.Verdura)
                 {
-                    inventario.AnyadirProducto(
+                    productosVendedor.Add(
                         new Verdura((VendedorC)listUsu.BuscadorPersona2(posLista),
                         formuAnyadir.Temporada,
                         formuAnyadir.PrecioKg,
@@ -87,7 +86,7 @@ namespace Projecte_programació.Pantalles
                 }
                 else if (formuAnyadir.Hortaliza)
                 {
-                    inventario.AnyadirProducto(
+                    productosVendedor.Add(
                         new Hortaliza((VendedorC)listUsu.BuscadorPersona2(posLista),
                         formuAnyadir.Temporada,
                         formuAnyadir.PrecioKg,
@@ -96,12 +95,10 @@ namespace Projecte_programació.Pantalles
                 }
             }
             dataGridView1.DataSource = typeof(ProductoA);
-            dataGridView1.DataSource = inventario.GetLista_Inventario();
+            dataGridView1.DataSource = productosVendedor;
+
 
         }
-
-
-
 
     }
 }
