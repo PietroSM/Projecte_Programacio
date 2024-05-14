@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projecte_programació.Producto
 {
@@ -14,12 +15,14 @@ namespace Projecte_programació.Producto
         protected double precioKg;
         protected int cantidad;
         protected string nombre;
+        protected bool comprar;
 
         public VendedorC Propietario { get => propietario; set => propietario = value; }
         public string Temporada { get => temporada; set => temporada = value; }
         public double PrecioKg { get => precioKg; set => precioKg = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+        public bool Comprar { get => comprar; set => comprar = value; }
 
         public ProductoA(VendedorC propietario, string temporada, 
             double precioKg, int cantidad, string nombre)
@@ -29,10 +32,12 @@ namespace Projecte_programació.Producto
             this.precioKg = precioKg;
             this.cantidad = cantidad;
             this.nombre = nombre;
+            comprar = false;
         }
 
         public ProductoA(): this(new Autonomo(),"",0,0,"") 
-        { 
+        {
+            comprar = false;
         }
 
         public VendedorC GetPropietario()

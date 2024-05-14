@@ -22,7 +22,8 @@ namespace Projecte_programació.Pantalles
         Formulario_Añadir_Productos formuAnyadir;
 
 
-        public Pagina_Vendedor_Main(Usuarios usu, int posLista, List<ProductoA> productosVendedor)
+        public Pagina_Vendedor_Main(Usuarios usu, int posLista, 
+            List<ProductoA> productosVendedor)
         {
             InitializeComponent();
             listUsu = usu;

@@ -17,6 +17,7 @@ namespace Projecte_programació.Pantalles
     public partial class Iniciar_Sessio : Form
     {
         Pagina_Vendedor_Main paginaVendedor;
+        Pagina_Client_Main paginaCliente;
         private Usuarios listUsu;
         private Inventario inventario;
 
@@ -74,6 +75,23 @@ namespace Projecte_programació.Pantalles
                         .ForEach(p => inventario.AnyadirProducto(p));
 
                     inventario.GuardarFichero();
+                }
+                else if(listUsu.tipoUsuario(correoTB) == "cliente")
+                {
+                    inventario.GetLista_Inventario().Clear();
+                    inventario.LeerFichero();
+
+                    paginaCliente = new Pagina_Client_Main(
+                        listUsu, listUsu.PosicionLista(correoTB),
+                        inventario.GetLista_Inventario());
+
+    
+
+
+                    DialogResult resultadoPaginaCliente = paginaCliente.ShowDialog();
+                    //inventario.GetLista_Inventario().Clear();
+
+
                 }
             }
             else

@@ -149,6 +149,19 @@ namespace Projecte_programació.Productos
             lista_inventario.Add(p);
         }
 
+
+        public static double CalcularPrecio(List<ProductoA> listaProductos)
+        {
+            double aux = 0;
+
+            for (int i = 0; i < listaProductos.Count; i++)
+            {
+                aux += listaProductos[i].GetPrecioKg() *
+                    listaProductos[i].GetCantidad();
+            }
+            return aux;
+        }
+
         public string MostrarUno(int pos)
         {
             return lista_inventario[pos].ToString();

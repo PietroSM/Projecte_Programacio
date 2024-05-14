@@ -53,6 +53,12 @@
     <Compile Include="Pantalles\Formulario_Añadir_Productos.Designer.cs">
       <DependentUpon>Formulario_Añadir_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalles\Formulario_Carrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalles\Formulario_Carrito.Designer.cs">
+      <DependentUpon>Formulario_Carrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalles\Iniciar_Sessio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="Productos\Verdura.cs" />
     <EmbeddedResource Include="Pantalles\Formulario_Añadir_Productos.resx">
       <DependentUpon>Formulario_Añadir_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalles\Formulario_Carrito.resx">
+      <DependentUpon>Formulario_Carrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalles\Iniciar_Sessio.resx">
       <DependentUpon>Iniciar_Sessio.cs</DependentUpon>
