@@ -67,12 +67,12 @@ namespace Projecte_programació.Persona
             this.correo = correo;
         }
 
+
         public override bool Equals(object obj)
         {
             return obj is Persona persona &&
                    correo == persona.correo;
         }
-
 
         public override string ToString()
         {

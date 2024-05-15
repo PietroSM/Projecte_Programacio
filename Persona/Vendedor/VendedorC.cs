@@ -44,15 +44,6 @@ namespace Projecte_programació.Persona.Vendedor
             this.CIF = CIF;
         }
 
-
-
-        //IListar ListarProductos()
-
-        //IListar AnyadirProducto()
-
-        //IListar EliminarProducto()
-
-
         public override string ToString()
         {
             return base.ToString();
