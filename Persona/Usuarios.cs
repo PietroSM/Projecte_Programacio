@@ -21,16 +21,19 @@ namespace Projecte_programació.Persona
         }
 
 
+
+        public List<Persona> GetPersonaList()
+        {
+            return personaList;
+        }
+
+        //Metodo para anyadir una persona a la lista
         public void AnyadirPersona(Persona persona)
         {
             personaList.Add(persona);
         }
 
-        public string MostrarDatos1(int pos)
-        {
-            return personaList[pos].ToString();
-        }
-
+        //Metodo para comprovar las credenciales del Login
         public bool ComprovarCredenciales(string texto, string password)
         {
             bool resultat = false;
@@ -47,6 +50,7 @@ namespace Projecte_programació.Persona
             return resultat;
         }
 
+        //Metodo para comprovar si el email ya esta utilizado
         public bool ComprovarEmail(string email)
         {
             bool resultat = false;
@@ -60,26 +64,21 @@ namespace Projecte_programació.Persona
             return resultat;
         }
 
-
+        //Metodo que retorna la poscion de la lista de un usuario
         public int PosicionLista(string texto)
         {
             return personaList.IndexOf(
                     new Cooperativa("", "", "", texto, 0, ""));
         }
 
+        //Metodo para saber el tipo de usuario
         public string tipoUsuario(string texto)
         {
             return personaList[PosicionLista(texto)] is VendedorC ? "vendedor" :
                 personaList[PosicionLista(texto)] is ClienteC ? "cliente" : "error";
         }
 
-        public List<Persona> GetPersonaList()
-        {
-            return personaList;
-        }
-
-
-
+        //Metodo para leer fichero
         public void LeerFichero()
         {
             StreamReader mifichero = null;
@@ -91,14 +90,14 @@ namespace Projecte_programació.Persona
                 mifichero = new StreamReader(nombreFichero);
                 linia = mifichero.ReadLine();
 
-                while(linia != null )
+                while (linia != null)
                 {
                     string[] parts = linia.Split(';');
                     //Cooperativa
                     if (parts[4] == "3")
                     {
                         personaList.Add(new Cooperativa(parts[0],
-                            parts[1], parts[2], parts[3], 
+                            parts[1], parts[2], parts[3],
                             Convert.ToInt32(parts[4]), parts[5]));
                     }
                     //Autonomo
@@ -109,7 +108,7 @@ namespace Projecte_programació.Persona
                             Convert.ToInt32(parts[4]), parts[5]));
                     }
                     //Particular
-                    else if(parts[4] == "0")
+                    else if (parts[4] == "0")
                     {
                         personaList.Add(new Particular(parts[0],
                             parts[1], parts[2], parts[3],
@@ -139,8 +138,7 @@ namespace Projecte_programació.Persona
 
         }
 
-
-
+        //Metodo para guardar la lista en el fichero
         public void GuardarFichero()
         {
             StreamWriter miFichero = null;
@@ -198,19 +196,23 @@ namespace Projecte_programació.Persona
             }
         }
 
-
-        //Devolver Usuario
+        //Metodo para devolver una persona
         public Persona BuscadorPersona(string email)
         {
             return personaList[personaList.IndexOf(
                 new Cooperativa("", "", "", email, 0, ""))];
         }
 
-
-
+        //Metodo para devolver una persona
         public Persona BuscadorPersona2(int pos)
         {
             return personaList[pos];
+        }
+
+        //Metodo utilizado para debbugear
+        public string MostrarDatos1(int pos)
+        {
+            return personaList[pos].ToString();
         }
     }
 }
