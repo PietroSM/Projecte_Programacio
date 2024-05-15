@@ -17,26 +17,47 @@ namespace Projecte_programació.Pantalles
         Iniciar_Sessio formuIniciar;
         private Usuarios listaUsu;
 
-        public Pagina_Benvinguda(Usuarios listaUsu)
+        public Pagina_Benvinguda()
         {
             InitializeComponent();
-            this.listaUsu = listaUsu;
+            listaUsu = new Usuarios();
         }
 
 
+        //Metodo que controla el evento del boton registrasre
+        //Carga en la lista de ususarios, los objetos del fitchero.
+        //Redirige a la pagina de registarse
+        //Al volver, guarda los ususarios de nuevo en el fichero
         private void Registrarse_Click(object sender, EventArgs e)
         {
+            listaUsu.GetPersonaList().Clear();
+            listaUsu.LeerFichero();
+
             formuRegistro = new registrarse(listaUsu);
-            formuRegistro.Show();
-            this.Hide();
+            Hide();
+            DialogResult resultadoRegistrar = formuRegistro.ShowDialog();
+            Show();
+
+            listaUsu = formuRegistro.ListaUsu;
+            listaUsu.GuardarFichero();
         }
 
-
+        //Metodo que controla el evento del boton iniciar sesion
+        //Carga en la lista de ususarios, los objetos del fitchero.
+        //Redirige a la pagina de iniciar sesion
+        //Al volver, guarda los ususarios de nuevo en el fichero
         private void iniciar_sessio_Click(object sender, EventArgs e)
         {
+            listaUsu.GetPersonaList().Clear();
+            listaUsu.LeerFichero();
+
             formuIniciar = new Iniciar_Sessio(listaUsu);
-            formuIniciar.Show();
-            this.Hide();
+            Hide();
+            DialogResult resultadoInciar = formuIniciar.ShowDialog();
+            Show();
+
+            listaUsu = formuIniciar.ListUsu;
+            listaUsu.GuardarFichero();
         }
     }
 }

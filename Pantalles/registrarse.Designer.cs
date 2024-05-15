@@ -34,9 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.RBVendedor = new System.Windows.Forms.RadioButton();
             this.RBCliente = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelVendedorCIF = new System.Windows.Forms.Label();
+            this.labelClienteCIF = new System.Windows.Forms.Label();
+            this.labelClienteDNI = new System.Windows.Forms.Label();
             this.BtnRegistrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.TBNombre = new System.Windows.Forms.TextBox();
@@ -46,8 +46,11 @@
             this.TBcifClient = new System.Windows.Forms.TextBox();
             this.TBdniClient = new System.Windows.Forms.TextBox();
             this.TBcifVendedor = new System.Windows.Forms.TextBox();
-            this.CBAutonomo = new System.Windows.Forms.CheckBox();
-            this.CBCooperativa = new System.Windows.Forms.CheckBox();
+            this.GRautocoope = new System.Windows.Forms.GroupBox();
+            this.RBcooperativa = new System.Windows.Forms.RadioButton();
+            this.RBautonomo = new System.Windows.Forms.RadioButton();
+            this.BTNback = new System.Windows.Forms.Button();
+            this.GRautocoope.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -104,13 +107,14 @@
             this.RBVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBVendedor.ForeColor = System.Drawing.Color.White;
             this.RBVendedor.Location = new System.Drawing.Point(1252, 405);
-            this.RBVendedor.Margin = new System.Windows.Forms.Padding(4);
+            this.RBVendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RBVendedor.Name = "RBVendedor";
             this.RBVendedor.Size = new System.Drawing.Size(148, 33);
             this.RBVendedor.TabIndex = 4;
             this.RBVendedor.TabStop = true;
             this.RBVendedor.Text = "Vendedor";
             this.RBVendedor.UseVisualStyleBackColor = true;
+            this.RBVendedor.CheckedChanged += new System.EventHandler(this.RBVendedor_CheckedChanged);
             // 
             // RBCliente
             // 
@@ -118,49 +122,50 @@
             this.RBCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBCliente.ForeColor = System.Drawing.Color.White;
             this.RBCliente.Location = new System.Drawing.Point(539, 405);
-            this.RBCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.RBCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RBCliente.Name = "RBCliente";
             this.RBCliente.Size = new System.Drawing.Size(117, 33);
             this.RBCliente.TabIndex = 5;
             this.RBCliente.TabStop = true;
             this.RBCliente.Text = "Cliente";
             this.RBCliente.UseVisualStyleBackColor = true;
+            this.RBCliente.CheckedChanged += new System.EventHandler(this.RBCliente_CheckedChanged);
             // 
-            // label5
+            // labelVendedorCIF
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1087, 464);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 29);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "CIF";
+            this.labelVendedorCIF.AutoSize = true;
+            this.labelVendedorCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVendedorCIF.ForeColor = System.Drawing.Color.White;
+            this.labelVendedorCIF.Location = new System.Drawing.Point(1087, 464);
+            this.labelVendedorCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelVendedorCIF.Name = "labelVendedorCIF";
+            this.labelVendedorCIF.Size = new System.Drawing.Size(54, 29);
+            this.labelVendedorCIF.TabIndex = 6;
+            this.labelVendedorCIF.Text = "CIF";
             // 
-            // label6
+            // labelClienteCIF
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(335, 464);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 29);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "CIF";
+            this.labelClienteCIF.AutoSize = true;
+            this.labelClienteCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClienteCIF.ForeColor = System.Drawing.Color.White;
+            this.labelClienteCIF.Location = new System.Drawing.Point(335, 464);
+            this.labelClienteCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelClienteCIF.Name = "labelClienteCIF";
+            this.labelClienteCIF.Size = new System.Drawing.Size(54, 29);
+            this.labelClienteCIF.TabIndex = 7;
+            this.labelClienteCIF.Text = "CIF";
             // 
-            // label7
+            // labelClienteDNI
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(332, 548);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 29);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "DNI";
+            this.labelClienteDNI.AutoSize = true;
+            this.labelClienteDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClienteDNI.ForeColor = System.Drawing.Color.White;
+            this.labelClienteDNI.Location = new System.Drawing.Point(332, 548);
+            this.labelClienteDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelClienteDNI.Name = "labelClienteDNI";
+            this.labelClienteDNI.Size = new System.Drawing.Size(57, 29);
+            this.labelClienteDNI.TabIndex = 8;
+            this.labelClienteDNI.Text = "DNI";
             // 
             // BtnRegistrar
             // 
@@ -170,7 +175,7 @@
             this.BtnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistrar.ForeColor = System.Drawing.Color.Transparent;
             this.BtnRegistrar.Location = new System.Drawing.Point(825, 726);
-            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(236, 63);
             this.BtnRegistrar.TabIndex = 9;
@@ -194,7 +199,7 @@
             // 
             this.TBNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBNombre.Location = new System.Drawing.Point(464, 215);
-            this.TBNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.TBNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBNombre.Name = "TBNombre";
             this.TBNombre.Size = new System.Drawing.Size(275, 34);
             this.TBNombre.TabIndex = 11;
@@ -203,7 +208,7 @@
             // 
             this.TBContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBContrasenya.Location = new System.Drawing.Point(464, 316);
-            this.TBContrasenya.Margin = new System.Windows.Forms.Padding(4);
+            this.TBContrasenya.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBContrasenya.Name = "TBContrasenya";
             this.TBContrasenya.Size = new System.Drawing.Size(275, 34);
             this.TBContrasenya.TabIndex = 12;
@@ -212,7 +217,7 @@
             // 
             this.TBLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBLocalizacion.Location = new System.Drawing.Point(1212, 215);
-            this.TBLocalizacion.Margin = new System.Windows.Forms.Padding(4);
+            this.TBLocalizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBLocalizacion.Name = "TBLocalizacion";
             this.TBLocalizacion.Size = new System.Drawing.Size(275, 34);
             this.TBLocalizacion.TabIndex = 13;
@@ -221,7 +226,7 @@
             // 
             this.TBCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBCorreo.Location = new System.Drawing.Point(1212, 316);
-            this.TBCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.TBCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBCorreo.Name = "TBCorreo";
             this.TBCorreo.Size = new System.Drawing.Size(275, 34);
             this.TBCorreo.TabIndex = 14;
@@ -230,7 +235,7 @@
             // 
             this.TBcifClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBcifClient.Location = new System.Drawing.Point(464, 460);
-            this.TBcifClient.Margin = new System.Windows.Forms.Padding(4);
+            this.TBcifClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBcifClient.Name = "TBcifClient";
             this.TBcifClient.Size = new System.Drawing.Size(275, 34);
             this.TBcifClient.TabIndex = 15;
@@ -239,7 +244,7 @@
             // 
             this.TBdniClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBdniClient.Location = new System.Drawing.Point(459, 544);
-            this.TBdniClient.Margin = new System.Windows.Forms.Padding(4);
+            this.TBdniClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBdniClient.Name = "TBdniClient";
             this.TBdniClient.Size = new System.Drawing.Size(280, 34);
             this.TBdniClient.TabIndex = 16;
@@ -248,34 +253,68 @@
             // 
             this.TBcifVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBcifVendedor.Location = new System.Drawing.Point(1212, 460);
-            this.TBcifVendedor.Margin = new System.Windows.Forms.Padding(4);
+            this.TBcifVendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBcifVendedor.Name = "TBcifVendedor";
             this.TBcifVendedor.Size = new System.Drawing.Size(276, 34);
             this.TBcifVendedor.TabIndex = 17;
             // 
-            // CBAutonomo
+            // GRautocoope
             // 
-            this.CBAutonomo.AutoSize = true;
-            this.CBAutonomo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBAutonomo.ForeColor = System.Drawing.Color.White;
-            this.CBAutonomo.Location = new System.Drawing.Point(1109, 546);
-            this.CBAutonomo.Name = "CBAutonomo";
-            this.CBAutonomo.Size = new System.Drawing.Size(152, 33);
-            this.CBAutonomo.TabIndex = 18;
-            this.CBAutonomo.Text = "Autonomo";
-            this.CBAutonomo.UseVisualStyleBackColor = true;
+            this.GRautocoope.Controls.Add(this.RBcooperativa);
+            this.GRautocoope.Controls.Add(this.RBautonomo);
+            this.GRautocoope.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GRautocoope.Location = new System.Drawing.Point(1092, 548);
+            this.GRautocoope.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRautocoope.Name = "GRautocoope";
+            this.GRautocoope.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRautocoope.Size = new System.Drawing.Size(436, 76);
+            this.GRautocoope.TabIndex = 20;
+            this.GRautocoope.TabStop = false;
             // 
-            // CBCooperativa
+            // RBcooperativa
             // 
-            this.CBCooperativa.AutoSize = true;
-            this.CBCooperativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBCooperativa.ForeColor = System.Drawing.Color.White;
-            this.CBCooperativa.Location = new System.Drawing.Point(1301, 548);
-            this.CBCooperativa.Name = "CBCooperativa";
-            this.CBCooperativa.Size = new System.Drawing.Size(176, 33);
-            this.CBCooperativa.TabIndex = 19;
-            this.CBCooperativa.Text = "Cooperativa";
-            this.CBCooperativa.UseVisualStyleBackColor = true;
+            this.RBcooperativa.AutoSize = true;
+            this.RBcooperativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBcooperativa.ForeColor = System.Drawing.Color.White;
+            this.RBcooperativa.Location = new System.Drawing.Point(227, 23);
+            this.RBcooperativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RBcooperativa.Name = "RBcooperativa";
+            this.RBcooperativa.Size = new System.Drawing.Size(175, 33);
+            this.RBcooperativa.TabIndex = 1;
+            this.RBcooperativa.TabStop = true;
+            this.RBcooperativa.Text = "Cooperativa";
+            this.RBcooperativa.UseVisualStyleBackColor = true;
+            // 
+            // RBautonomo
+            // 
+            this.RBautonomo.AutoSize = true;
+            this.RBautonomo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBautonomo.ForeColor = System.Drawing.Color.White;
+            this.RBautonomo.Location = new System.Drawing.Point(29, 23);
+            this.RBautonomo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RBautonomo.Name = "RBautonomo";
+            this.RBautonomo.Size = new System.Drawing.Size(151, 33);
+            this.RBautonomo.TabIndex = 0;
+            this.RBautonomo.TabStop = true;
+            this.RBautonomo.Text = "Autonomo";
+            this.RBautonomo.UseVisualStyleBackColor = true;
+            // 
+            // BTNback
+            // 
+            this.BTNback.BackColor = System.Drawing.Color.Orange;
+            this.BTNback.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTNback.FlatAppearance.BorderSize = 4;
+            this.BTNback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNback.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNback.ForeColor = System.Drawing.Color.White;
+            this.BTNback.Location = new System.Drawing.Point(85, 66);
+            this.BTNback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTNback.Name = "BTNback";
+            this.BTNback.Size = new System.Drawing.Size(131, 78);
+            this.BTNback.TabIndex = 29;
+            this.BTNback.Text = "Volver";
+            this.BTNback.UseVisualStyleBackColor = false;
+            this.BTNback.Click += new System.EventHandler(this.BTNback_Click);
             // 
             // registrarse
             // 
@@ -283,8 +322,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(1845, 998);
-            this.Controls.Add(this.CBCooperativa);
-            this.Controls.Add(this.CBAutonomo);
+            this.Controls.Add(this.BTNback);
+            this.Controls.Add(this.GRautocoope);
             this.Controls.Add(this.TBcifVendedor);
             this.Controls.Add(this.TBdniClient);
             this.Controls.Add(this.TBcifClient);
@@ -294,18 +333,22 @@
             this.Controls.Add(this.TBNombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BtnRegistrar);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelClienteDNI);
+            this.Controls.Add(this.labelClienteCIF);
+            this.Controls.Add(this.labelVendedorCIF);
             this.Controls.Add(this.RBCliente);
             this.Controls.Add(this.RBVendedor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "registrarse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "registrarse";
+            this.GRautocoope.ResumeLayout(false);
+            this.GRautocoope.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,9 +362,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton RBVendedor;
         private System.Windows.Forms.RadioButton RBCliente;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelVendedorCIF;
+        private System.Windows.Forms.Label labelClienteCIF;
+        private System.Windows.Forms.Label labelClienteDNI;
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TBNombre;
@@ -331,7 +374,9 @@
         private System.Windows.Forms.TextBox TBcifClient;
         private System.Windows.Forms.TextBox TBdniClient;
         private System.Windows.Forms.TextBox TBcifVendedor;
-        private System.Windows.Forms.CheckBox CBAutonomo;
-        private System.Windows.Forms.CheckBox CBCooperativa;
+        private System.Windows.Forms.GroupBox GRautocoope;
+        private System.Windows.Forms.RadioButton RBautonomo;
+        private System.Windows.Forms.RadioButton RBcooperativa;
+        private System.Windows.Forms.Button BTNback;
     }
 }

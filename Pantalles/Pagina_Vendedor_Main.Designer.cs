@@ -165,7 +165,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNanyadir);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pagina_Vendedor_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pagina_Vendedor_Main";
             this.Load += new System.EventHandler(this.Pagina_Vendedor_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

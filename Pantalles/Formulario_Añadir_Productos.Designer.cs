@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(641, 232);
+            this.label1.Location = new System.Drawing.Point(641, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 29);
             this.label1.TabIndex = 14;
@@ -104,7 +104,8 @@
             // TBnombre
             // 
             this.TBnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBnombre.Location = new System.Drawing.Point(810, 227);
+            this.TBnombre.Location = new System.Drawing.Point(811, 226);
+            this.TBnombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBnombre.Name = "TBnombre";
             this.TBnombre.Size = new System.Drawing.Size(275, 34);
             this.TBnombre.TabIndex = 18;
@@ -112,7 +113,8 @@
             // TBtemporada
             // 
             this.TBtemporada.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBtemporada.Location = new System.Drawing.Point(810, 299);
+            this.TBtemporada.Location = new System.Drawing.Point(811, 299);
+            this.TBtemporada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBtemporada.Name = "TBtemporada";
             this.TBtemporada.Size = new System.Drawing.Size(275, 34);
             this.TBtemporada.TabIndex = 19;
@@ -120,7 +122,8 @@
             // TBprecio
             // 
             this.TBprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBprecio.Location = new System.Drawing.Point(810, 377);
+            this.TBprecio.Location = new System.Drawing.Point(811, 377);
+            this.TBprecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBprecio.Name = "TBprecio";
             this.TBprecio.Size = new System.Drawing.Size(275, 34);
             this.TBprecio.TabIndex = 20;
@@ -128,7 +131,8 @@
             // NUDcantidad
             // 
             this.NUDcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUDcantidad.Location = new System.Drawing.Point(810, 455);
+            this.NUDcantidad.Location = new System.Drawing.Point(811, 455);
+            this.NUDcantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUDcantidad.Name = "NUDcantidad";
             this.NUDcantidad.Size = new System.Drawing.Size(275, 34);
             this.NUDcantidad.TabIndex = 21;
@@ -138,7 +142,8 @@
             this.RBfruta.AutoSize = true;
             this.RBfruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBfruta.ForeColor = System.Drawing.Color.White;
-            this.RBfruta.Location = new System.Drawing.Point(654, 556);
+            this.RBfruta.Location = new System.Drawing.Point(653, 556);
+            this.RBfruta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RBfruta.Name = "RBfruta";
             this.RBfruta.Size = new System.Drawing.Size(94, 33);
             this.RBfruta.TabIndex = 22;
@@ -152,6 +157,7 @@
             this.RBverdura.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBverdura.ForeColor = System.Drawing.Color.White;
             this.RBverdura.Location = new System.Drawing.Point(847, 556);
+            this.RBverdura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RBverdura.Name = "RBverdura";
             this.RBverdura.Size = new System.Drawing.Size(126, 33);
             this.RBverdura.TabIndex = 23;
@@ -165,6 +171,7 @@
             this.RBhortaliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBhortaliza.ForeColor = System.Drawing.Color.White;
             this.RBhortaliza.Location = new System.Drawing.Point(1051, 556);
+            this.RBhortaliza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RBhortaliza.Name = "RBhortaliza";
             this.RBhortaliza.Size = new System.Drawing.Size(137, 33);
             this.RBhortaliza.TabIndex = 24;
@@ -181,6 +188,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(832, 704);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 89);
             this.button1.TabIndex = 25;
@@ -196,9 +204,10 @@
             this.BTNback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNback.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNback.ForeColor = System.Drawing.Color.White;
-            this.BTNback.Location = new System.Drawing.Point(86, 66);
+            this.BTNback.Location = new System.Drawing.Point(85, 66);
+            this.BTNback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTNback.Name = "BTNback";
-            this.BTNback.Size = new System.Drawing.Size(130, 77);
+            this.BTNback.Size = new System.Drawing.Size(131, 78);
             this.BTNback.TabIndex = 26;
             this.BTNback.Text = "Volver";
             this.BTNback.UseVisualStyleBackColor = false;
@@ -224,7 +233,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Formulario_Añadir_Productos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Formulario_Añadir_Productos";
             ((System.ComponentModel.ISupportInitialize)(this.NUDcantidad)).EndInit();
             this.ResumeLayout(false);

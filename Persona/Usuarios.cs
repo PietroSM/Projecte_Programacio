@@ -47,6 +47,20 @@ namespace Projecte_programació.Persona
             return resultat;
         }
 
+        public bool ComprovarEmail(string email)
+        {
+            bool resultat = false;
+            for (int i = 0; i < personaList.Count; i++)
+            {
+                if (personaList[i].GetCorreo() == email)
+                {
+                    resultat = true;
+                }
+            }
+            return resultat;
+        }
+
+
         public int PosicionLista(string texto)
         {
             return personaList.IndexOf(
@@ -63,6 +77,8 @@ namespace Projecte_programació.Persona
         {
             return personaList;
         }
+
+
 
         public void LeerFichero()
         {
@@ -124,6 +140,63 @@ namespace Projecte_programació.Persona
         }
 
 
+
+        public void GuardarFichero()
+        {
+            StreamWriter miFichero = null;
+            string nombrefichero = "Usuarios.txt";
+
+            try
+            {
+                miFichero = new StreamWriter(nombrefichero);
+
+                for (int i = 0;i<personaList.Count;i++)
+                {
+                    if (personaList[i] is Particular)
+                    {
+                        miFichero.WriteLine(personaList[i].GetNombre()+";"+
+                            personaList[i].GetContrasenya()+";"+
+                            personaList[i].GetLocalizacion()+";"+
+                            personaList[i].GetCorreo()+";0;"+
+                            ((Particular)personaList[i]).GetDni());
+                    }
+                    else if (personaList[i] is Empresa)
+                    {
+                        miFichero.WriteLine(personaList[i].GetNombre() + ";" +
+                            personaList[i].GetContrasenya() + ";" +
+                            personaList[i].GetLocalizacion() + ";" +
+                            personaList[i].GetCorreo() + ";1;" +
+                            ((Empresa)personaList[i]).GetCif());
+                    }
+                    else if (personaList[i] is Autonomo)
+                    {
+                        miFichero.WriteLine(personaList[i].GetNombre() + ";" +
+                            personaList[i].GetContrasenya() + ";" +
+                            personaList[i].GetLocalizacion() + ";" +
+                            personaList[i].GetCorreo() + ";2;" +
+                            ((Autonomo)personaList[i]).GetCIF());
+                    }
+                    else if (personaList[i] is Cooperativa)
+                    {
+                        miFichero.WriteLine(personaList[i].GetNombre() + ";" +
+                            personaList[i].GetContrasenya() + ";" +
+                            personaList[i].GetLocalizacion() + ";" +
+                            personaList[i].GetCorreo() + ";3;" +
+                            ((Cooperativa)personaList[i]).GetCIF());
+                    }
+                }
+            }
+            catch (IOException)
+            {
+
+                Console.WriteLine("Error");
+            }
+            finally
+            {
+                if (miFichero != null)
+                    miFichero.Close();
+            }
+        }
 
 
         //Devolver Usuario

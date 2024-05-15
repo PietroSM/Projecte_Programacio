@@ -88,7 +88,7 @@ namespace Projecte_programació.Pantalles
         private void BTNback_Click(object sender, EventArgs e)
         {
             cancelar = true;
-            Close(); ;
+            Close();
         }
     }
 }

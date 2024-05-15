@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TBcontra = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.BTNback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -64,7 +65,7 @@
             // 
             this.TBnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBnombre.Location = new System.Drawing.Point(864, 348);
-            this.TBnombre.Margin = new System.Windows.Forms.Padding(4);
+            this.TBnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBnombre.Name = "TBnombre";
             this.TBnombre.Size = new System.Drawing.Size(275, 34);
             this.TBnombre.TabIndex = 13;
@@ -85,10 +86,11 @@
             // 
             this.TBcontra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBcontra.Location = new System.Drawing.Point(864, 463);
-            this.TBcontra.Margin = new System.Windows.Forms.Padding(4);
+            this.TBcontra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBcontra.Name = "TBcontra";
             this.TBcontra.Size = new System.Drawing.Size(275, 34);
             this.TBcontra.TabIndex = 15;
+            this.TBcontra.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -98,7 +100,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(827, 645);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 63);
             this.button1.TabIndex = 16;
@@ -106,20 +108,40 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // BTNback
+            // 
+            this.BTNback.BackColor = System.Drawing.Color.Orange;
+            this.BTNback.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTNback.FlatAppearance.BorderSize = 4;
+            this.BTNback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNback.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNback.ForeColor = System.Drawing.Color.White;
+            this.BTNback.Location = new System.Drawing.Point(85, 66);
+            this.BTNback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTNback.Name = "BTNback";
+            this.BTNback.Size = new System.Drawing.Size(131, 78);
+            this.BTNback.TabIndex = 28;
+            this.BTNback.Text = "Volver";
+            this.BTNback.UseVisualStyleBackColor = false;
+            this.BTNback.Click += new System.EventHandler(this.BTNback_Click);
+            // 
             // Iniciar_Sessio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(1845, 998);
+            this.Controls.Add(this.BTNback);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TBcontra);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TBnombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Iniciar_Sessio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Iniciar_Sessio";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,5 +156,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TBcontra;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTNback;
     }
 }

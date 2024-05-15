@@ -20,6 +20,7 @@ namespace Projecte_programació.Pantalles
         private List<ProductoA> listaProductos;
 
 
+
         public Pagina_Client_Main(Usuarios usu, int posLista,
             List<ProductoA> listaProductos)
         {
@@ -29,31 +30,54 @@ namespace Projecte_programació.Pantalles
             this.listaProductos = listaProductos;
         }
 
-
         public List<ProductoA> ListaProductos
         {
-            get { return listaProductos; }
+            get => listaProductos;
+            set => listaProductos = value;
         }
 
+
+
+        //Carga la lista en la GridView
         private void Pagina_Client_Main_Load(object sender, EventArgs e)
         {
             listaProductos.ForEach(
                 p => productoABindingSource.Add(p));
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        //metodo que controla el click del bonton carrito
+        //Nos redigire a la pagina del carrito, enviando los productos seleccionados
         private void BTNcarrito_Click(object sender, EventArgs e)
         {
-            List<ProductoA> listaEnviar = listaProductos.Where(p => p.Comprar == true).ToList();
+            //Productos a enviar
+            List<ProductoA> listaEnviar = listaProductos
+                .Where(p => p.Comprar == true).ToList();
+            //Productos restantes
+            List<ProductoA> listaConservar = listaProductos
+                .Where(p => p.Comprar == false).ToList();
 
             formuCarrito = new Formulario_Carrito(listUsu, posLista,
                 listaEnviar);
+            DialogResult resultadoCompra = formuCarrito.ShowDialog();
 
-            DialogResult = formuCarrito.ShowDialog();
+            //Volvemos a volcar, los productos que convervamos
+            listaProductos.Clear();
+            listaConservar.ForEach(p =>  listaProductos.Add(p));
+
+            //Recibimos la lista del carrito por si el ususario al final no compra
+            // y lo volvemos a volcar a la lista
+            List<ProductoA> listaRecibida = formuCarrito.ListaProductosComprar;
+            listaRecibida.ForEach(p => listaProductos.Add(p));
+
+            //Actualizamos el Grid
+            dataGridView1.DataSource = typeof(ProductoA);
+            dataGridView1.DataSource = listaProductos;
+        }
+
+        //Vuelve a la pagina anterior
+        private void BTNback_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

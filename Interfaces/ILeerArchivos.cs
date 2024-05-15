@@ -9,5 +9,6 @@ namespace Projecte_programació.Interfaces
     public interface ILeerArchivos
     {
         void LeerFichero();
+        void GuardarFichero();
     }
 }

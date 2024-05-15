@@ -28,7 +28,8 @@ namespace Projecte_programació.Pantalles
             this.listaProductosComprar = listaProductosComprar;
             this.posLista = posLista;
             TBprecioTotal.ReadOnly = true;
-            TBprecioTotal.Text = Convert.ToString(Inventario.CalcularPrecio(listaProductosComprar));
+            TBprecioTotal.Text = Convert.ToString(
+                Inventario.CalcularPrecio(listaProductosComprar) + " €");
         }
 
 
@@ -37,14 +38,26 @@ namespace Projecte_programació.Pantalles
             get { return listaProductosComprar; }
         }
 
-
-
-
-
+        //Carga la lista en la GridView
         private void Formulario_Carrito_Load(object sender, EventArgs e)
         {
             listaProductosComprar.ForEach(
                 p => productoABindingSource.Add(p));
+        }
+        
+        //Vuelve a la pagina anterior
+        private void BTNback_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        //Metodo que controla el click del boton comprar.
+        //Muestra un mensaje de compra realizada, limpia la lista y cierra la pagina
+        private void BTNcompra_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Compra realizada, total: {TBprecioTotal.Text}");
+            listaProductosComprar.Clear();
+            Close();
         }
     }
 }

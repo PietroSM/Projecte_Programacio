@@ -41,9 +41,10 @@
             this.iniciar_sessio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iniciar_sessio.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iniciar_sessio.ForeColor = System.Drawing.Color.White;
-            this.iniciar_sessio.Location = new System.Drawing.Point(834, 523);
+            this.iniciar_sessio.Location = new System.Drawing.Point(1112, 644);
+            this.iniciar_sessio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iniciar_sessio.Name = "iniciar_sessio";
-            this.iniciar_sessio.Size = new System.Drawing.Size(284, 56);
+            this.iniciar_sessio.Size = new System.Drawing.Size(379, 69);
             this.iniciar_sessio.TabIndex = 0;
             this.iniciar_sessio.Text = "Iniciar Sessión";
             this.iniciar_sessio.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             this.Registrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registrarse.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registrarse.ForeColor = System.Drawing.Color.White;
-            this.Registrarse.Location = new System.Drawing.Point(189, 523);
+            this.Registrarse.Location = new System.Drawing.Point(252, 644);
+            this.Registrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Registrarse.Name = "Registrarse";
-            this.Registrarse.Size = new System.Drawing.Size(284, 56);
+            this.Registrarse.Size = new System.Drawing.Size(379, 69);
             this.Registrarse.TabIndex = 1;
             this.Registrarse.Text = "Registrarse";
             this.Registrarse.UseVisualStyleBackColor = false;
@@ -70,22 +72,26 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(425, 136);
+            this.label1.Location = new System.Drawing.Point(567, 167);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 73);
+            this.label1.Size = new System.Drawing.Size(586, 91);
             this.label1.TabIndex = 2;
             this.label1.Text = "WOLLA-DONA";
             // 
             // Pagina_Benvinguda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
-            this.ClientSize = new System.Drawing.Size(1384, 811);
+            this.ClientSize = new System.Drawing.Size(1845, 998);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrarse);
             this.Controls.Add(this.iniciar_sessio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Pagina_Benvinguda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagina_Benvinguda";
             this.ResumeLayout(false);
             this.PerformLayout();

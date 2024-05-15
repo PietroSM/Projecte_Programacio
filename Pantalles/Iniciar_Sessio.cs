@@ -21,6 +21,8 @@ namespace Projecte_programació.Pantalles
         private Usuarios listUsu;
         private Inventario inventario;
 
+
+
         public Iniciar_Sessio(Usuarios usu)
         {
             InitializeComponent();
@@ -28,6 +30,12 @@ namespace Projecte_programació.Pantalles
             inventario = new Inventario();
         }
 
+        public Usuarios ListUsu 
+        { 
+            get => listUsu; 
+        }
+
+        //Metodo para controlar el inicio de session
         private void button1_Click(object sender, EventArgs e)
         {
             string correoTB, contrasenyaTB;
@@ -85,12 +93,14 @@ namespace Projecte_programació.Pantalles
                         listUsu, listUsu.PosicionLista(correoTB),
                         inventario.GetLista_Inventario());
 
-    
-
-
+                    Hide();
                     DialogResult resultadoPaginaCliente = paginaCliente.ShowDialog();
-                    //inventario.GetLista_Inventario().Clear();
-
+                    Show();
+                    
+                    //Volvemos a cargar la lista al inventario
+                    List<ProductoA> listaRecibida = paginaCliente.ListaProductos;
+                    inventario.SetLista_Inventario(listaRecibida);
+                    inventario.GuardarFichero();
 
                 }
             }
@@ -98,6 +108,12 @@ namespace Projecte_programació.Pantalles
             {
                 MessageBox.Show("Correo o Contraseña erronea");
             }
+        }
+
+        //Vuelve a la pagina anterior
+        private void BTNback_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

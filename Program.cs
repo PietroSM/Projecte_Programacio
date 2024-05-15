@@ -21,10 +21,7 @@ namespace Projecte_programació
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Usuarios usuarios = new Usuarios();
-            usuarios.LeerFichero();
-            usuarios.AnyadirPersona(new Cooperativa());
-            Application.Run(new Pagina_Benvinguda(usuarios));
+            Application.Run(new Pagina_Benvinguda());
 
         }
     }
