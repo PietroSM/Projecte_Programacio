@@ -33,7 +33,7 @@ namespace Projecte_programació.Productos
             this.lista_inventario = lista_inventario;
         }
         
-
+        //Metodo para leer el fichero de los productos
         public void LeerFichero()
         {
             StreamReader miFichero = null;
@@ -91,7 +91,7 @@ namespace Projecte_programació.Productos
             }
         }
 
-
+        //Metodo para guardar los productos en un fichero .txt
         public void GuardarFichero()
         {
             StreamWriter miFichero = null;
@@ -143,13 +143,13 @@ namespace Projecte_programació.Productos
             }
         }
 
-
+        //Metodo para anyadir un producto a la lista
         public void AnyadirProducto(ProductoA p)
         {
             lista_inventario.Add(p);
         }
 
-
+        //Metodo para calcular el precio del carrito
         public static double CalcularPrecio(List<ProductoA> listaProductos)
         {
             double aux = 0;
@@ -162,6 +162,7 @@ namespace Projecte_programació.Productos
             return aux;
         }
 
+        //Metodo utilizado para debbugear
         public string MostrarUno(int pos)
         {
             return lista_inventario[pos].ToString();
