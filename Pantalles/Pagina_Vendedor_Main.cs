@@ -101,5 +101,10 @@ namespace Projecte_programació.Pantalles
 
         }
 
+        //Vuelve a la pagina anterior
+        private void BTNback_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

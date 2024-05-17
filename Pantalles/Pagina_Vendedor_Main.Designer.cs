@@ -41,6 +41,7 @@
             this.productoABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.verduraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BTNback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoABindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource)).BeginInit();
@@ -156,12 +157,30 @@
             // 
             this.productoABindingSource.DataSource = typeof(Projecte_programació.Producto.ProductoA);
             // 
+            // BTNback
+            // 
+            this.BTNback.BackColor = System.Drawing.Color.Orange;
+            this.BTNback.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTNback.FlatAppearance.BorderSize = 4;
+            this.BTNback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNback.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNback.ForeColor = System.Drawing.Color.White;
+            this.BTNback.Location = new System.Drawing.Point(85, 66);
+            this.BTNback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTNback.Name = "BTNback";
+            this.BTNback.Size = new System.Drawing.Size(131, 78);
+            this.BTNback.TabIndex = 29;
+            this.BTNback.Text = "Volver";
+            this.BTNback.UseVisualStyleBackColor = false;
+            this.BTNback.Click += new System.EventHandler(this.BTNback_Click);
+            // 
             // Pagina_Vendedor_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(86)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(1845, 998);
+            this.Controls.Add(this.BTNback);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNanyadir);
             this.Controls.Add(this.label8);
@@ -193,5 +212,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioKgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.Button BTNback;
     }
 }
